@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 import { useDispatch } from 'react-redux'
 import { postText } from '../redux/actions/actions'
 
@@ -8,6 +9,9 @@ export const NavBar = () => {
 
     const enviar=(e)=>{
         e.preventDefault()
+        if(text===''){
+            return toast.error('tiene que ingresar un texto')
+        }
         dispatch(postText(text))
     }
     return (

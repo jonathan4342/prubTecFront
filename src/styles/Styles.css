@@ -7,3 +7,7 @@
 .tabla{
     padding: 70px  70px  70px  70px;
 }
+.divLista{
+    display:flex;
+    gap: 5rem;
+}
