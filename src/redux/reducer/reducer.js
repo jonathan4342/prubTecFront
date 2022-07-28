@@ -1,6 +1,5 @@
 const inicialState = {
     palabras:[],
-    reverPala:[]
 }
 
 function rootReducer(state = inicialState, action) {
@@ -8,7 +7,7 @@ function rootReducer(state = inicialState, action) {
         case 'POST_TEXT':
             return{
                 ...state,
-                palabras:[...state.palabras,action.payload]
+                palabras:[action.payload,...state.palabras]
             }
         default:
             return state;

@@ -16,10 +16,10 @@ export const ListaDePalabras = () => {
                 </thead>
                 <tbody>
                     {
-                        selector.reverse().map(e => {
+                        selector.map(e => {
                             return (
                                 <tr key={e.text}>
-                                    <th scope="col"></th>
+                                    <th scope="row"></th>
                                     <td>{e.text}</td>
                                 </tr>
                             )
